@@ -1,0 +1,105 @@
+################################################
+# Standardized Deployment
+################################################
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deployment
+spec:
+  # Number of pod replicas desired, only use if HPA is not defined...
+  replicas: 1
+  strategy:
+    type: RollingUpdate
+  selector:
+    matchLabels:
+      app: base
+  template:
+    metadata:
+      labels:
+        app: base
+    spec:
+      initContainers:
+      containers:
+        # The primary container for our service
+        - name: app
+          image: base
+          imagePullPolicy: Always
+          env:
+            # Default env variables we want all containers to have
+            - name: "POD_NAME"
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.name
+            - name: "POD_NAMESPACE"
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.namespace
+            - name: "NAMESPACE"
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.namespace
+            - name: NODE_NAME
+              valueFrom:
+                fieldRef:
+                  fieldPath: spec.nodeName
+          ports:
+            - name: app
+              containerPort: 80
+              protocol: TCP
+            - name: liveness
+              containerPort: 80
+              protocol: TCP
+          # Pull env variables from other configmaps or secrets
+          envFrom:
+            - secretRef:
+                name: env
+          # Liveness probes, which dictate if a pod is healthy or should be replaced
+          livenessProbe:
+            initialDelaySeconds: 5
+            periodSeconds: 10
+            successThreshold: 1
+            failureThreshold: 3
+            tcpSocket:
+              port: liveness
+          # Readiness probes, which dictate if a pod is ready to receive traffic
+          readinessProbe:
+            initialDelaySeconds: 5
+            periodSeconds: 10
+            successThreshold: 1
+            failureThreshold: 3
+            tcpSocket:
+              port: liveness
+          # This defines our resource limits
+          resources:
+            requests:
+              memory: "64Mi"
+              cpu: "250m"
+            limits:
+              memory: "128Mi"
+              cpu: "500m"
+      # Modify /etc/resolv.conf ndots to reduce excess DNS queries
+      # foo.bar.com will be resolved; foo.bar, foo go to the search list first
+      dnsConfig:
+        options:
+          - name: ndots
+            value: "3"
+      # This is pod affinity and anti-affinity, to determine where to schedule pods
+      affinity:
+        podAntiAffinity:
+          preferredDuringSchedulingIgnoredDuringExecution:
+            # We want to prefer (but not require) that pods do not get
+            # scheduled on the same node
+            - weight: 100
+              podAffinityTerm:
+                topologyKey: "kubernetes.io/hostname"
+                labelSelector:
+                  matchLabels:
+                    app: base
+            # We want to prefer (but not require) that pods do not get
+            # scheduled on the same availability zone, to get actual redundancy between zone failures
+            - weight: 100
+              podAffinityTerm:
+                topologyKey: "failure-domain.beta.kubernetes.io/zone"
+                labelSelector:
+                  matchLabels:
+                    app: base

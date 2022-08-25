@@ -1,0 +1,12 @@
+################################################
+# Standardized Pod Disruption Budget (pdb)
+################################################
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata:
+  name: pdb
+spec:
+  maxUnavailable: 25%
+  selector:
+    matchLabels:
+      app: base
