@@ -16,12 +16,18 @@ spec:
     metadata:
       labels: {}
     spec:
-      initContainers:
+      securityContext:
+        runAsUser: 1000
+      initContainers: []
       containers:
         # The primary container for our service
         - name: app
           image: base
           imagePullPolicy: Always
+          securityContext:
+            privileged: false
+            allowPrivilegeEscalation: false
+            runAsNonRoot: true
           env:
             # Default env variables we want all containers to have
             - name: "POD_NAME"
