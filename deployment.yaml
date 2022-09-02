@@ -11,12 +11,10 @@ spec:
   strategy:
     type: RollingUpdate
   selector:
-    matchLabels:
-      app: base
+    matchLabels: {}
   template:
     metadata:
-      labels:
-        app: base
+      labels: {}
     spec:
       initContainers:
       containers:
@@ -93,13 +91,11 @@ spec:
               podAffinityTerm:
                 topologyKey: "kubernetes.io/hostname"
                 labelSelector:
-                  matchLabels:
-                    app: base
+                  matchLabels: {}
             # We want to prefer (but not require) that pods do not get
             # scheduled on the same availability zone, to get actual redundancy between zone failures
             - weight: 100
               podAffinityTerm:
                 topologyKey: "failure-domain.beta.kubernetes.io/zone"
                 labelSelector:
-                  matchLabels:
-                    app: base
+                  matchLabels: {}

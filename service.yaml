@@ -7,9 +7,9 @@ metadata:
   name: service
 spec:
   type: ClusterIP
+  selector: {}
   ports:
     - port: 80
       targetPort: 80
       protocol: TCP
-  selector:
-    app: base
+      name: app
