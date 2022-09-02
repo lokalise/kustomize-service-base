@@ -7,6 +7,10 @@ resources:
   - pdb.yaml
   - hpa.yaml
   - ingress.yaml
+  - servicemonitor.yaml
+
+configurations:
+  - servicemonitorMatchLabels.yaml
 
 secretGenerator:
   - name: env
