@@ -8,28 +8,6 @@ resources:
   - hpa.yaml
   - ingress.yaml
 
-replacements:
-  # HPA setup
-  - source:
-      kind: Deployment
-      fieldPath: metadata.name
-    targets:
-      - select:
-          kind: HorizontalPodAutoscaler
-          name: hpa
-        fieldPaths:
-          - spec.scaleTargetRef.name
-  # Ingress setup
-  - source:
-      kind: Service
-      fieldPath: metadata.name
-    targets:
-      - select:
-          kind: Ingress
-          name: ingress
-        fieldPaths:
-          - spec.rules.*.http.paths.*.backend.service.name
-
 secretGenerator:
   - name: env
     envs:
