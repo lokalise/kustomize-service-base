@@ -50,9 +50,6 @@ spec:
             - name: app
               containerPort: 80
               protocol: TCP
-            - name: liveness
-              containerPort: 80
-              protocol: TCP
           # Pull env variables from other configmaps or secrets
           envFrom:
             - secretRef:
@@ -64,7 +61,7 @@ spec:
             successThreshold: 1
             failureThreshold: 3
             tcpSocket:
-              port: liveness
+              port: app
           # Readiness probes, which dictate if a pod is ready to receive traffic
           readinessProbe:
             initialDelaySeconds: 5
@@ -72,7 +69,7 @@ spec:
             successThreshold: 1
             failureThreshold: 3
             tcpSocket:
-              port: liveness
+              port: app
           # This defines our resource limits
           resources:
             requests:
