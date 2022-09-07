@@ -26,3 +26,24 @@ deployment | `Deployment`<br>`Service`<br>`ServiceAccount`<br>`ServiceMonitor`
 ingress | `Ingress`
 hpa | `HorizontalPodAutoscaler`
 pdb | `PodDisruptionBudget`
+
+
+To remove a resource from a group, for example if you don't need a `ServiceAccount` in the `deployment` group,
+do the following:
+
+```yaml
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+- github.com/lokalise/kustomize-service-base/manifests/deployment
+
+patchesStrategicMerge:
+  # Exclude unneded resources from base
+  - |-
+    $patch: delete
+    apiVersion: v1
+    kind: ServiceAccount
+    metadata:
+      name: serviceaccount
+```
