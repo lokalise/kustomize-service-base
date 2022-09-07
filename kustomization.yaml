@@ -8,6 +8,7 @@ resources:
   - hpa.yaml
   - ingress.yaml
   - servicemonitor.yaml
+  - serviceAccount.yaml
 
 configurations:
   - servicemonitorMatchLabels.yaml
