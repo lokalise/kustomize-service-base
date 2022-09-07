@@ -4,16 +4,11 @@ kind: Kustomization
 resources:
   - deployment.yaml
   - service.yaml
-  - pdb.yaml
-  - hpa.yaml
-  - ingress.yaml
-  - servicemonitor.yaml
+  - serviceMonitor.yaml
   - serviceAccount.yaml
+
+patchesStrategicMerge:
+- serviceAccountDeployment.yaml
 
 configurations:
   - servicemonitorMatchLabels.yaml
-
-secretGenerator:
-  - name: env
-    envs:
-      - app.env
