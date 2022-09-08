@@ -1,5 +1,25 @@
 # Common kustomize manifests
 
+## Contributing
+
+Use conventional commits, when making changes to assure a good changelog and
+versioning: https://www.conventionalcommits.org/en/v1.0.0/#summary
+
+---
+
+The commit contains the following structural elements, to communicate intent to the consumers of your library:
+
+  fix: a commit of the type fix patches a bug in your codebase (this correlates with PATCH in Semantic Versioning).
+  Example: `fix: Add default value to field`
+
+  feat: a commit of the type feat introduces a new feature to the codebase (this correlates with MINOR in Semantic Versioning).
+  Example: `feat: Introduce new component`
+
+  BREAKING CHANGE: a commit that has a footer BREAKING CHANGE:, or appends a ! after the type/scope, introduces a breaking API change (correlating with MAJOR in Semantic Versioning). A BREAKING CHANGE can be part of commits of any type.
+  Example: `BREAKING CHANGE: Restructure`
+
+---
+
 ## Usage
 
 Check the `examples` directory: https://github.com/lokalise/kustomize-service-base/tree/main/examples/full
