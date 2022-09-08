@@ -6,7 +6,7 @@ kind: PodDisruptionBudget
 metadata:
   name: pdb
 spec:
-  maxUnavailable: 25%
+  minAvailable: 30%
   selector:
     matchLabels:
       app: base
