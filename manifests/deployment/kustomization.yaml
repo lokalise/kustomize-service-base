@@ -6,6 +6,7 @@ resources:
   - service.yaml
   - serviceMonitor.yaml
   - serviceAccount.yaml
+  - hpa.yaml
 
 patchesStrategicMerge:
 - serviceAccountDeployment.yaml
