@@ -16,15 +16,13 @@ kind: Kustomization
 resources:
 - github.com/lokalise/kustomize-service-base/manifests/deployment
 - github.com/lokalise/kustomize-service-base/manifests/ingress
-- github.com/lokalise/kustomize-service-base/manifests/hpa
 - github.com/lokalise/kustomize-service-base/manifests/pdb
 ```
 
 Group | Kubernetes Resources
 --- | ---
-deployment | `Deployment`<br>`Service`<br>`ServiceAccount`<br>`ServiceMonitor`
+deployment | `Deployment`<br>`Service`<br>`ServiceAccount`<br>`ServiceMonitor`<br>`HorizontalPodAutoscaler`
 ingress | `Ingress`
-hpa | `HorizontalPodAutoscaler`
 pdb | `PodDisruptionBudget`
 
 
