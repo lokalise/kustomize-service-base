@@ -16,14 +16,12 @@ kind: Kustomization
 resources:
 - github.com/lokalise/kustomize-service-base/manifests/deployment
 - github.com/lokalise/kustomize-service-base/manifests/ingress
-- github.com/lokalise/kustomize-service-base/manifests/pdb
 ```
 
 Group | Kubernetes Resources
 --- | ---
-deployment | `Deployment`<br>`Service`<br>`ServiceAccount`<br>`ServiceMonitor`<br>`HorizontalPodAutoscaler`
+deployment | `Deployment`<br>`Service`<br>`ServiceAccount`<br>`ServiceMonitor`<br>`HorizontalPodAutoscaler`<br>`PodDisruptionBudget`
 ingress | `Ingress`
-pdb | `PodDisruptionBudget`
 
 
 To remove a resource from a group, for example if you don't need a `ServiceAccount` in the `deployment` group,
