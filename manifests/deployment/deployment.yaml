@@ -87,6 +87,14 @@ spec:
             value: "3"
       # This is pod affinity and anti-affinity, to determine where to schedule pods
       affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+              - matchExpressions:
+                - key: role
+                  operator: In
+                  values:
+                    - application
         podAntiAffinity:
           preferredDuringSchedulingIgnoredDuringExecution:
             # We want to prefer (but not require) that pods do not get
