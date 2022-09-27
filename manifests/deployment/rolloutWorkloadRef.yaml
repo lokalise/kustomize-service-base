@@ -1,5 +1,0 @@
-nameReference:
-  - kind: Deployment
-    fieldSpecs:
-      - kind: Rollout
-        path: spec/workloadRef/name

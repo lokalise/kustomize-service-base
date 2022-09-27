@@ -3,7 +3,8 @@ kind: Rollout
 metadata:
   name: rollout
 spec:
-  replicas: 5
+  # Controlled by HPA
+  replicas: 1
   selector:
     matchLabels: {}
   workloadRef:
@@ -14,4 +15,4 @@ spec:
     canary:
       steps:
         - setWeight: 20
-        - pause: {duration: 10s}
+        - pause: {duration: 300s}

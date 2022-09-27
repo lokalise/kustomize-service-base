@@ -17,4 +17,4 @@ patches:
 configurations:
   - servicemonitorMatchLabels.yaml
   - rolloutMatchLabels.yaml
-  - rolloutWorkloadRef.yaml
+  - rolloutNameReference.yaml
