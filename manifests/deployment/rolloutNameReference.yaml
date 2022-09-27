@@ -1,0 +1,9 @@
+nameReference:
+  - kind: Deployment
+    fieldSpecs:
+      - kind: Rollout
+        path: spec/workloadRef/name
+  - kind: Rollout
+    fieldSpecs:
+      - kind: HorizontalPodAutoscaler
+        path: spec/scaleTargetRef/name
