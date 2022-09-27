@@ -40,12 +40,12 @@ resources:
 
 Group | Kubernetes Resources
 --- | ---
-deployment | `Deployment`<br>`Service`<br>`ServiceAccount`<br>`ServiceMonitor`<br>`HorizontalPodAutoscaler`<br>`PodDisruptionBudget`
+deployment | `Deployment`<br>`Service`<br>`ServiceAccount`<br>`ServiceMonitor`<br>`HorizontalPodAutoscaler`<br>`PodDisruptionBudget` <br> `Rollout`
 ingress | `Ingress`
 
 
 To remove a resource from a group, for example if you don't need a `ServiceAccount` in the `deployment` group,
-do the following:
+do the following on the "client-side":
 
 ```yaml
 apiVersion: kustomize.config.k8s.io/v1beta1

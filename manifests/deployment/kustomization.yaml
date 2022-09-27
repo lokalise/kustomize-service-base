@@ -8,9 +8,13 @@ resources:
   - serviceAccount.yaml
   - hpa.yaml
   - pdb.yaml
+  - rollout.yaml
 
-patchesStrategicMerge:
-- serviceAccountDeployment.yaml
+patches:
+  - path: hpaRolloutReference.yaml
+  - path: serviceAccountDeployment.yaml
 
 configurations:
   - servicemonitorMatchLabels.yaml
+  - rolloutMatchLabels.yaml
+  - rolloutWorkloadRef.yaml

@@ -6,8 +6,8 @@ kind: Deployment
 metadata:
   name: deployment
 spec:
-  # Number of pod replicas desired, only use if HPA is not defined...
-  replicas: 1
+  # The number of replicas is controlled by HPA and Rollout, this has to be set to 0
+  replicas: 0
   revisionHistoryLimit: 5
   strategy:
     type: RollingUpdate
