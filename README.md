@@ -38,10 +38,11 @@ resources:
 - github.com/lokalise/kustomize-service-base/manifests/ingress
 ```
 
-Group | Kubernetes Resources
+Group | Kubernetes Resources | Description
 --- | ---
-deployment | `Deployment`<br>`Service`<br>`ServiceAccount`<br>`ServiceMonitor`<br>`HorizontalPodAutoscaler`<br>`PodDisruptionBudget` <br> `Rollout`
-ingress | `Ingress`
+deployment | `Deployment`<br>`Service`<br>`ServiceAccount`<br>`ServiceMonitor`<br>`HorizontalPodAutoscaler`<br>`PodDisruptionBudget` <br> `Rollout` | All required components for an application, following best practices. No associated ingress.
+ingress | `Ingress` | Public Nginx ingress (routable from the Internet) 
+ingress-internal | `Ingress` | Private Nginx ingress (routable only from withing the clusters and Tailscale)
 
 
 To remove a resource from a group, for example if you don't need a `ServiceAccount` in the `deployment` group,
