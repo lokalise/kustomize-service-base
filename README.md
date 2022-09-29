@@ -39,10 +39,10 @@ resources:
 ```
 
 Group | Kubernetes Resources | Description
---- | ---
+--- | --- | ---
 deployment | `Deployment`<br>`Service`<br>`ServiceAccount`<br>`ServiceMonitor`<br>`HorizontalPodAutoscaler`<br>`PodDisruptionBudget` <br> `Rollout` | All required components for an application, following best practices. No associated ingress.
 ingress | `Ingress` | Public Nginx ingress (routable from the Internet) 
-ingress-internal | `Ingress` | Private Nginx ingress (routable only from withing the clusters and Tailscale). Creates 2 ingresses: application, application preview (argo rollout b/g)
+ingress-internal | `Ingress` | Private Nginx ingress (routable only from within the clusters and Tailscale). Creates 2 ingresses: application, application preview (argo rollout b/g)
 
 
 To remove a resource from a group, for example if you don't need a `ServiceAccount` in the `deployment` group,
