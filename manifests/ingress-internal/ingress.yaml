@@ -1,11 +1,11 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: ingress
+  name: ingress-internal
 spec:
-  ingressClassName: nginx
+  ingressClassName: nginx-internal
   rules:
-  - host: app-public.env.lokalise.cloud
+  - host: app-internal.env.lokalise.cloud
     http:
       paths:
       - path: /
