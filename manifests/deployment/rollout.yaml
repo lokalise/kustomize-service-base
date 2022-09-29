@@ -3,8 +3,8 @@ kind: Rollout
 metadata:
   name: rollout
 spec:
-  # Controlled by HPA
-  replicas: 1
+  # Controlled by HPA; do NOT set explicitly! (race condition)
+  # replicas: 1
   selector:
     matchLabels: {}
   workloadRef:
@@ -12,7 +12,7 @@ spec:
     kind: Deployment
     name: deployment
   strategy:
-    canary:
-      steps:
-        - setWeight: 20
-        - pause: {duration: 300s}
+    blueGreen:
+      activeService: service
+      previewService: service-preview
+      autoPromotionEnabled: false
