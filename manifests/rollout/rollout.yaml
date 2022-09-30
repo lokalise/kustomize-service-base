@@ -1,16 +1,10 @@
-################################################
-# Standardized Deployment
-################################################
-apiVersion: apps/v1
-kind: Deployment
+apiVersion: argoproj.io/v1alpha1
+kind: Rollout
 metadata:
-  name: deployment
+  name: rollout
 spec:
-  # The number of replicas is controlled by HPA and Rollout, this has to be set to 0
-  replicas: 0
-  revisionHistoryLimit: 5
-  strategy:
-    type: RollingUpdate
+  # Controlled by HPA; do NOT set explicitly! (race condition with HPA)
+  # replicas: 1
   selector:
     matchLabels: {}
   template:
@@ -111,3 +105,13 @@ spec:
                 topologyKey: "failure-domain.beta.kubernetes.io/zone"
                 labelSelector:
                   matchLabels: {}
+
+  strategy:
+    blueGreen:
+      # Blue
+      activeService: service
+      # Green
+      previewService: service-preview
+      # Set to 'false' to pause the rollout and have the
+      # ability to inspect Green with the new application version
+      autoPromotionEnabled: true
