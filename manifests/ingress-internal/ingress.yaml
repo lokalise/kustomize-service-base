@@ -2,6 +2,13 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: ingress-internal
+  annotations:
+    nginx.ingress.kubernetes.io/server-snippet: |
+      location ~* /(metrics|health) {
+          deny all;
+          return 403;
+      }
+
 spec:
   ingressClassName: nginx-internal
   rules:
