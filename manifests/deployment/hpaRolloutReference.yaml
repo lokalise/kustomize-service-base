@@ -1,9 +1,0 @@
-apiVersion: autoscaling/v2
-kind: HorizontalPodAutoscaler
-metadata:
-  name: hpa
-spec:
-  scaleTargetRef:
-    apiVersion: argoproj.io/v1alpha1
-    kind: Rollout
-    name: rollout
