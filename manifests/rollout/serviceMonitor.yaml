@@ -3,5 +3,7 @@ kind: ServiceMonitor
 metadata:
   name: servicemonitor
 spec:
+  namespaceSelector:
+    any: true
   endpoints:
   - port: app
