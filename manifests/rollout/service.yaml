@@ -9,6 +9,7 @@ spec:
   type: ClusterIP
   selector: {}
   ports:
-    - port: 80
+    - name: app
+      port: 80
       targetPort: app
       protocol: TCP
