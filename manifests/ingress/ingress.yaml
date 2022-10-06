@@ -9,7 +9,7 @@ metadata:
           return 404;
       }
 spec:
-  ingressClassName: nginx
+  ingressClassName: nginx-internet-facing
   rules:
   - host: app-public.env.lokalise.cloud
     http:
