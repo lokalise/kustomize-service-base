@@ -2,6 +2,16 @@ apiVersion: argoproj.io/v1alpha1
 kind: Rollout
 metadata:
   name: rollout
+  annotations:
+    notifications.argoproj.io/subscribe.on-rollout-step-completed.slack: k8s-app-rollouts-all
+    notifications.argoproj.io/subscribe.on-rollout-step-updated.slack: k8s-app-rollouts-all
+    notifications.argoproj.io/subscribe.on-rollout-completed.slack: k8s-app-rollouts-all
+    notifications.argoproj.io/subscribe.on-rollout-updated.slack: k8s-app-rollouts-all
+    notifications.argoproj.io/subscribe.on-replica-set-create-error.slack: k8s-app-rollouts-all
+    notifications.argoproj.io/subscribe.on-rollout-healthy.slack: k8s-app-rollouts-all
+    notifications.argoproj.io/subscribe.on-traffic-weight-updated.slack: k8s-app-rollouts-all
+    notifications.argoproj.io/subscribe.on-new-replica-set-available.slack: k8s-app-rollouts-all
+
 spec:
   # Controlled by HPA; do NOT set explicitly! (race condition with HPA)
   # replicas: 1
