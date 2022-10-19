@@ -9,6 +9,10 @@ resources:
   - serviceAccount.yaml
   - hpa.yaml
   - pdb.yaml
+  - ingress-deny.yaml
+  - ingress-allow-prometheus.yaml
+  - ingress-allow-internet-facing-nginx.yaml
+  - ingress-allow-internal-nginx.yaml
 
 patches:
   - path: serviceAccountRollout.yaml

@@ -1,23 +1,23 @@
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
-  name: networkpolicy-ingress-allow-prometheus
+  name: networkpolicy-ingress-allow-internet-facing-nginx
 spec:
   podSelector:
-    matchLabels:
-      app: filestorageservice
+    matchLabels: {}
   policyTypes:
   - Ingress
   ingress:
   - from:
       - podSelector:
           matchLabels:
-            app.kubernetes.io/name: prometheus
+            infra/app: ingress-nginx-internet-facing
+            infra/component: controller
       - namespaceSelector:
           matchExpressions:
             - key: kubernetes.io/metadata.name
               operator: In
-              values: [monitoring]
+              values: [ingress-internet-facing]
     ports:
-    - port: 9090
+    - port: 3000
       protocol: TCP

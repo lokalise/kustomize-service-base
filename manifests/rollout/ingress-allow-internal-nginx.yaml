@@ -4,8 +4,7 @@ metadata:
   name: networkpolicy-ingress-allow-internal-nginx
 spec:
   podSelector:
-    matchLabels:
-      app: filestorageservice
+    matchLabels: {}
   policyTypes:
   - Ingress
   ingress:
