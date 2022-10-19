@@ -1,0 +1,24 @@
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: networkpolicy-ingress-allow-internet-facing-nginx
+spec:
+  podSelector:
+    matchLabels:
+      app: filestorageservice
+  policyTypes:
+  - Ingress
+  ingress:
+  - from:
+      - podSelector:
+          matchLabels:
+            infra/app: ingress-nginx-internet-facing
+            infra/component: controller
+      - namespaceSelector:
+          matchExpressions:
+            - key: kubernetes.io/metadata.name
+              operator: In
+              values: [ingress-internet-facing]
+    ports:
+    - port: 3000
+      protocol: TCP
