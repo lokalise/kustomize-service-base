@@ -40,7 +40,7 @@ resources:
 
 Group | Kubernetes Resources | Description
 --- | --- | ---
-rollout | `Rollout`<br>`Service`<br>`ServiceAccount`<br>`ServiceMonitor`<br>`HorizontalPodAutoscaler`<br>`PodDisruptionBudget` | All required components for an application, following best practices. No associated ingress.
+rollout | `Rollout`<br>`Service`<br>`ServiceAccount`<br>`ServiceMonitor`<br>`HorizontalPodAutoscaler`<br>`PodDisruptionBudget`<br>`NetworkPolicy` | All required components for an application, following best practices. No associated ingress.
 ingress | `Ingress` | Public Nginx ingress (routable from the Internet) 
 ingress-internal | `Ingress` | Private Nginx ingress (routable only from within the clusters and Tailscale). Creates 2 ingresses: application, application preview (argo rollout b/g)
 

@@ -1,0 +1,10 @@
+commonLabels:
+- path: spec/podSelector/matchLabels
+  kind: NetworkPolicy
+  name: networkpolicy-ingress-allow-internal-nginx
+- path: spec/podSelector/matchLabels
+  kind: NetworkPolicy
+  name: networkpolicy-ingress-allow-internet-facing-nginx
+- path: spec/podSelector/matchLabels
+  kind: NetworkPolicy
+  name: networkpolicy-ingress-allow-prometheus

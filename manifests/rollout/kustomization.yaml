@@ -9,6 +9,10 @@ resources:
   - serviceAccount.yaml
   - hpa.yaml
   - pdb.yaml
+  - networkpolicyIngressDeny.yaml
+  - networkpolicyPrometheus.yaml
+  - networkpolicyIngressNginxInternetFacing.yaml
+  - networkpolicyIngressNginxInternal.yaml
 
 patches:
   - path: serviceAccountRollout.yaml
@@ -16,6 +20,7 @@ patches:
 configurations:
   - servicemonitorMatchLabels.yaml
   - rolloutTransform.yaml
+  - networkpolicyMatchLabels.yaml
 
 openapi:
   path: argo_all_k8s_kustomize_schema.json
