@@ -10,9 +10,15 @@ spec:
   ingress:
   - from:
       - podSelector:
-          matchLabels:
-            infra/app: ingress-nginx-internal
-            infra/component: controller
+          matchExpressions:
+            - key: infra/app
+              operator: In
+              values:
+              - ingress-nginx-internal
+            - key: infra/component
+              operator: In
+              values:
+              - controller
       - namespaceSelector:
           matchExpressions:
             - key: kubernetes.io/metadata.name

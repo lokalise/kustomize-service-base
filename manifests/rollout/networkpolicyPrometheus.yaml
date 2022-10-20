@@ -10,8 +10,11 @@ spec:
   ingress:
   - from:
       - podSelector:
-          matchLabels:
-            app.kubernetes.io/name: prometheus
+          matchExpressions:
+            - key: app.kubernetes.io/name
+              operator: In
+              values:
+              - prometheus
       - namespaceSelector:
           matchExpressions:
             - key: kubernetes.io/metadata.name

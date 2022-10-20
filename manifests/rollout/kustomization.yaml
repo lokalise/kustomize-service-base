@@ -20,7 +20,6 @@ patches:
 configurations:
   - servicemonitorMatchLabels.yaml
   - rolloutTransform.yaml
-  - networkpolicyMatchLabels.yaml
 
 openapi:
   path: argo_all_k8s_kustomize_schema.json
