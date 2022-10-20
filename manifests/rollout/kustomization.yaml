@@ -9,10 +9,7 @@ resources:
   - serviceAccount.yaml
   - hpa.yaml
   - pdb.yaml
-  - networkpolicyIngressDeny.yaml
-  - networkpolicyPrometheus.yaml
-  - networkpolicyIngressNginxInternetFacing.yaml
-  - networkpolicyIngressNginxInternal.yaml
+  - networkpolicy.yaml
 
 patches:
   - path: serviceAccountRollout.yaml
