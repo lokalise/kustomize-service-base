@@ -41,8 +41,9 @@ resources:
 Group | Kubernetes Resources | Description
 --- | --- | ---
 rollout | `Rollout`<br>`Service`<br>`ServiceAccount`<br>`ServiceMonitor`<br>`HorizontalPodAutoscaler`<br>`PodDisruptionBudget`<br>`NetworkPolicy` | All required components for an application, following best practices. No associated ingress.
-ingress | `Ingress` | Public Nginx ingress (routable from the Internet) 
-ingress-internal | `Ingress` | Private Nginx ingress (routable only from within the clusters and Tailscale). Creates 2 ingresses: application, application preview (argo rollout b/g)
+ingress | `Ingress` | Public Nginx ingress (routable from the Internet).
+ingress-internal | `Ingress` | Private Nginx ingress (routable only from within the clusters and Tailscale). Creates 2 ingresses: application, application preview (argo rollout b/g).
+job | `Job`, `Secret` | Job which starts in the `PreSync` ArgoCD phase for executing tasks like DB migrations. Runs commands in the app container.
 
 
 To remove a resource from a group, for example if you don't need a `ServiceAccount` in the `rollout` group,
