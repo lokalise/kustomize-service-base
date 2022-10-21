@@ -36,6 +36,8 @@ kind: Kustomization
 resources:
 - github.com/lokalise/kustomize-service-base/manifests/rollout
 - github.com/lokalise/kustomize-service-base/manifests/ingress
+- github.com/lokalise/kustomize-service-base/manifests/ingress-internal
+- github.com/lokalise/kustomize-service-base/manifests/job
 ```
 
 Group | Kubernetes Resources | Description
