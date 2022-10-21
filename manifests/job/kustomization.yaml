@@ -1,0 +1,36 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+  # To change the job's command, create a patch in an overlay:
+  # - patch: |-
+  #   apiVersion: batch/v1
+  #   kind: Job
+  #   metadata:
+  #     name: job
+  #   spec:
+  #     template:
+  #       spec:
+  #         containers:
+  #           - name: app
+  #             command:
+  #               - "npm"
+  #               - "run"
+  #               - "db:migrations"
+  - job.yaml
+
+# To populate the secret associated with the Job,
+# use the following snippet in an overlay:
+# secretGenerator:
+# - behavior: merge
+#   envs:
+#   - vault.env
+#   name: job-env
+secretGenerator:
+- name: job-env
+  behavior: create
+  options:
+    annotations:
+      argocd.argoproj.io/hook: PreSync
+      # Make sure that the secret exists before the Job (wave: -1)
+      argocd.argoproj.io/sync-wave: "-2"
