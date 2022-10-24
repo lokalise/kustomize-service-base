@@ -7,6 +7,9 @@ metadata:
     argocd.argoproj.io/sync-wave: "-1"
 spec:
   template:
+    metadata:
+      labels:
+        service/workload-type: job
     spec:
       securityContext:
         runAsUser: 1000
