@@ -1,0 +1,24 @@
+apiVersion: keda.sh/v1alpha1
+kind: ScaledObject
+metadata:
+  name: scaledobject
+spec:
+  scaleTargetRef:
+    apiVersion: argoproj.io/v1alpha1
+    kind: Rollout
+    name: rollout
+  pollingInterval: 30
+  cooldownPeriod:  300
+  minReplicaCount: 3
+  maxReplicaCount: 10
+  advanced:
+    restoreToOriginalReplicaCount: true
+  triggers:
+  - type: cpu
+    metadata:
+      type: Utilization
+      value: "85"
+  - type: memory
+    metadata:
+      type: Utilization
+      value: "85"
