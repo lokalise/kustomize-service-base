@@ -90,5 +90,5 @@ spec:
               operator: In
               values: [monitoring]
     ports:
-    - port: 9090
+    - port: 9080
       protocol: TCP
