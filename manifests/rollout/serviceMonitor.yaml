@@ -6,4 +6,4 @@ spec:
   namespaceSelector:
     any: true
   endpoints:
-  - port: app
+  - port: metrics
