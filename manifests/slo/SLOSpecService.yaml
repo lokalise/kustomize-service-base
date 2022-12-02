@@ -1,0 +1,11 @@
+nameReference:
+- kind: Service
+  fieldSpecs:
+  - path: spec/service
+    kind: PrometheusServiceLevel
+
+namePrefix:
+- path: spec/slos/alerting/name
+  kind: PrometheusServiceLevel
+- path: spec/slos/sli/plugin/options/service_name_regex
+  kind: PrometheusServiceLevel
