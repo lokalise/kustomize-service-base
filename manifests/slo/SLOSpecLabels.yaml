@@ -1,0 +1,10 @@
+commonLabels:
+- path: spec/labels
+  create: true
+  kind: PrometheusServiceLevel
+- path: spec/slos/alerting/pageAlert/labels
+  create: true
+  kind: PrometheusServiceLevel
+- path: spec/slos/alerting/ticketAlert/labels
+  create: true
+  kind: PrometheusServiceLevel

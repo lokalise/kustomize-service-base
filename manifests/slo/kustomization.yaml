@@ -1,0 +1,39 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+  - SLOSpec.yaml
+
+configurations:
+  - SLOSpecLabels.yaml
+  - SLOSpecService.yaml
+
+# To patch the spec, use jsonpatch as follows:
+#
+# patches:
+#   # availability SLO
+#   - patch: |-
+#       - op: add
+#         path: /spec/slos/0/alerting/pageAlert/labels
+#         value:
+#           foo: bar
+#       - op: add
+#         path: /spec/slos/0/alerting/ticketAlert/labels
+#         value:
+#           foo: bar
+#     target:
+#       kind: PrometheusServiceLevel
+#       name: slo-spec
+#   # high latency SLO
+#   - patch: |-
+#       - op: add
+#         path: /spec/slos/1/alerting/pageAlert/labels
+#         value:
+#           foo: bar
+#       - op: add
+#         path: /spec/slos/1/alerting/ticketAlert/labels
+#         value:
+#           foo: bar
+#     target:
+#       kind: PrometheusServiceLevel
+#       name: slo-spec

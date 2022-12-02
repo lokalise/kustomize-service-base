@@ -1,0 +1,46 @@
+apiVersion: sloth.slok.dev/v1
+kind: PrometheusServiceLevel
+metadata:
+  name: slo-spec
+  namespace: monitoring
+  labels:
+    release: "prometheus-stack"
+spec:
+  service: service
+  labels: {}
+  slos:
+    - name: http-availability
+      objective: 99.9
+      description: "99.9% of the requests should be successful"
+      sli:
+        plugin:
+          # Plugin reference: https://github.com/lokalise/common-sloth-sli-plugins/tree/main/plugins/nginx-http
+          id: "lokalise/nginx-http/availability"
+          options:
+            service_name_regex: service
+      alerting:
+        name: high-error-rate
+        pageAlert:
+          labels:
+            runbookurl: todo
+        ticketAlert:
+          labels:
+            runbookurl: todo
+    - name: http-latency
+      objective: 95
+      description: "95% of the requests should have lower than 500ms latency"
+      sli:
+        plugin:
+          # Plugin reference: https://github.com/lokalise/common-sloth-sli-plugins/tree/main/plugins/nginx-http
+          id: "lokalise/nginx-http/latency"
+          options:
+            service_name_regex: service
+            bucket: "0.5"
+      alerting:
+        name: high-latency
+        pageAlert:
+          labels:
+            runbookurl: todo
+        ticketAlert:
+          labels:
+            runbookurl: todo
