@@ -1,4 +1,4 @@
-# Common kustomize manifests
+# PUBLIC kustomize manifests
 
 ## Contributing
 
