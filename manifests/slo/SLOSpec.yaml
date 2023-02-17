@@ -22,10 +22,12 @@ spec:
         name: high-error-rate
         pageAlert:
           labels:
-            runbookurl: todo
+            link_runbook: todo
+            responders: "Test team"
         ticketAlert:
           labels:
-            runbookurl: todo
+            link_runbook: todo
+            responders: "Test team"
     - name: http-latency
       objective: 95
       description: "95% of the requests should have lower than 500ms latency"
