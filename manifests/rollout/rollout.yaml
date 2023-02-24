@@ -53,7 +53,7 @@ spec:
                   fieldPath: spec.nodeName
           ports:
             - name: app
-              containerPort: 80
+              containerPort: 8080
               protocol: TCP
           # Pull env variables from other configmaps or secrets
           envFrom:
