@@ -7,6 +7,8 @@ metadata:
     notifications.argoproj.io/subscribe.on-rollout-progressing.slack: k8s-app-rollouts-all
     notifications.argoproj.io/subscribe.on-rollout-healthy.slack: k8s-app-rollouts-all
     notifications.argoproj.io/subscribe.on-rollout-degraded.slack: k8s-app-rollouts-all
+    notifications.argoproj.io/subscribe.on-new-version-released.grafana: service
+
 
 spec:
   # Controlled by HPA; do NOT set explicitly! (race condition with HPA)

@@ -127,6 +127,8 @@ nameReference:
     kind: Rollout
   - path: spec/strategy/canary/trafficRouting/alb/rootService
     kind: Rollout
+  - path: metadata/annotations/notifications.argoproj.io\/subscribe.on-new-version-released.grafana
+    kind: Rollout
 - kind: VirtualService
   group: networking.istio.io
   fieldSpecs:
