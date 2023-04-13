@@ -76,7 +76,7 @@ patchesStrategicMerge:
 
 Component | Applies to Group(s) | Description
 --- | --- | ---
-no-tls | ingress-internal | `Ingress` | Updates the `ingressClassName` to `nginx-internal-http`, which is a TLS-disabled, internal ingress controller.
+no-tls | ingress-internal | Updates the `ingressClassName` to `nginx-internal-http`, which is a TLS-disabled, internal ingress controller.
 
 Usage:
 
