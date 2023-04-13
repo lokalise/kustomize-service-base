@@ -69,3 +69,25 @@ patchesStrategicMerge:
     metadata:
       name: serviceaccount
 ```
+
+### Components
+
+[Components](https://kubectl.docs.kubernetes.io/guides/config_management/components/) are a way to package up patches, providing "variants" of existing resources.
+
+Component | Applies to Kubernetes Resource(s) | Description
+--- | --- | ---
+no-tls | ingress-internal | `Ingress` | Updates the `ingressClassName` to `nginx-internal-http`, which is a TLS-disabled, internal ingress controller.
+
+Usage:
+
+```yaml
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+  - github.com/lokalise/kustomize-service-base/manifests/ingress-internal?ref=v1.5.0
+  ...
+
+components:
+  - github.com/lokalise/kustomize-service-base/manifests/ingress-internal/components/no-tls?ref=v1.7.2
+```
