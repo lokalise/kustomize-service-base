@@ -1,0 +1,17 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ingress-internal-preview
+spec:
+  ingressClassName: nginx-internal-http
+  rules:
+  - host: app-internal.env.lokalise.cloud
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: service-preview
+            port:
+              number: 80
