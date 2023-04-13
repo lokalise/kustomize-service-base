@@ -74,7 +74,7 @@ patchesStrategicMerge:
 
 [Components](https://kubectl.docs.kubernetes.io/guides/config_management/components/) are a way to package up patches, providing "variants" of existing resources.
 
-Component | Applies to Kubernetes Resource(s) | Description
+Component | Applies to Group(s) | Description
 --- | --- | ---
 no-tls | ingress-internal | `Ingress` | Updates the `ingressClassName` to `nginx-internal-http`, which is a TLS-disabled, internal ingress controller.
 
