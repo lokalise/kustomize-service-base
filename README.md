@@ -85,7 +85,7 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
 resources:
-  - github.com/lokalise/kustomize-service-base/manifests/ingress-internal?ref=v1.5.0
+  - github.com/lokalise/kustomize-service-base/manifests/ingress-internal?ref=v1.7.2
   ...
 
 components:
