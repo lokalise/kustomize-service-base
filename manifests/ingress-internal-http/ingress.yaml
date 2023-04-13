@@ -1,8 +1,7 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: ingress-internal
-
+  name: ingress-internal-http
 spec:
   ingressClassName: nginx-internal-http
   rules:
