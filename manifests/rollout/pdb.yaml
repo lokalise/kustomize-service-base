@@ -10,3 +10,8 @@ spec:
   selector:
     matchLabels:
       app: base
+    matchExpressions:
+      - key: service/workload-type
+        operator: NotIn
+        values:
+          - job
