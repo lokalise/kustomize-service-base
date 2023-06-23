@@ -8,6 +8,7 @@ metadata:
     notifications.argoproj.io/subscribe.on-rollout-healthy.slack: k8s-app-rollouts-all
     notifications.argoproj.io/subscribe.on-rollout-degraded.slack: k8s-app-rollouts-all
     notifications.argoproj.io/subscribe.on-new-version-released.grafana: service
+    notifications.argoproj.io/subscribe.on-new-version-released-shared.grafana: k8s-app-rollouts
 
 
 spec:
