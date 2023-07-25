@@ -1,0 +1,30 @@
+apiVersion: karpenter.sh/v1alpha5
+kind: Provisioner
+metadata:
+  name: provisioner
+spec:
+  providerRef:
+    name: default
+  taints:
+    - key: platform/karpenter
+      effect: NoSchedule
+  requirements:
+    - key: "karpenter.k8s.aws/instance-category"
+      operator: In
+      values: ["t4","t3"]
+    - key: "karpenter.k8s.aws/instance-cpu"
+      operator: In
+      values: ["1"]
+    - key: "topology.kubernetes.io/zone"
+      operator: In
+      values: ["eu-central-1a", "eu-central-1b", "eu-central-1c"]
+    - key: "kubernetes.io/arch"
+      operator: In
+      values: ["amd64","arm64"]
+    - key: "karpenter.sh/capacity-type"
+      operator: In
+      values: ["spot","on-demand"]
+  consolidation:
+    enabled: false
+  ttlSecondsAfterEmpty: 30
+  ttlSecondsUntilExpired: 2592000
