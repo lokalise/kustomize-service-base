@@ -5,7 +5,7 @@ patches:
   - patch: |
       - op: add
         path: /metadata/labels/slothPlugin
-        value: lokalise/http
+        value: lokalise-http
       - op: replace
         path: /spec/slos/0/sli/plugin
         value:
