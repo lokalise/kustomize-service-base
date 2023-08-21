@@ -1,6 +1,6 @@
 {
  "release-type": "simple",
-  "bootstrap-sha": "dee3b8f25af86a83c39495eb52c2871ad3ab0335",
+  "bootstrap-sha": "6a0353bb225def7b8ad8bfd4a53322c8d20a3195",
   "commit-search-depth": 100,
   "packages": {
     "manifests/ingress-internal": {
