@@ -95,3 +95,7 @@ resources:
 components:
   - github.com/lokalise/kustomize-service-base/manifests/ingress-internal/components/no-tls?ref=v1.7.2
 ```
+
+### Versioning
+
+Each group is versioned separately, with named tags (eg. `ingress-v1.10.1`) using [release-please](https://github.com/googleapis/release-please). See [this page](https://github.com/lokalise/platform-handbook/blob/main/adr/0001-std-gh-repos.md#versioning) for the complete flow.

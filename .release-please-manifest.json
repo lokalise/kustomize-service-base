@@ -1,0 +1,9 @@
+{
+  "manifests/ingress-internal": "1.10.1",
+  "manifests/karpenter": "1.10.1",
+  "manifests/ingress": "1.10.1",
+  "manifests/rollout": "1.10.1",
+  "manifests/cronjob": "1.10.1",
+  "manifests/job": "1.10.1",
+  "manifests/slo": "1.10.1"
+}

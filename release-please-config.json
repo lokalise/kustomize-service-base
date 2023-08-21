@@ -1,0 +1,28 @@
+{
+ "release-type": "simple",
+  "bootstrap-sha": "dee3b8f25af86a83c39495eb52c2871ad3ab0335",
+  "commit-search-depth": 100,
+  "packages": {
+    "manifests/ingress-internal": {
+      "package-name": "ingress-internal"
+    },
+    "manifests/karpenter": {
+      "package-name": "karpenter"
+    },
+    "manifests/ingress": {
+      "package-name": "ingress"
+    },
+    "manifests/rollout": {
+      "package-name": "rollout"
+    },
+    "manifests/cronjob": {
+      "package-name": "cronjob"
+    },
+    "manifests/job": {
+      "package-name": "job"
+    },
+    "manifests/slo": {
+      "package-name": "slo"
+    }
+  }
+}
