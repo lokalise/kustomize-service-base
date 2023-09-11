@@ -5,7 +5,7 @@ metadata:
 spec:
   ingressClassName: nginx-internal
   rules:
-  - host: app-internal.env.lokalise.cloud
+  - host: app-internal-preview.env.lokalise.cloud
     http:
       paths:
       - path: /
