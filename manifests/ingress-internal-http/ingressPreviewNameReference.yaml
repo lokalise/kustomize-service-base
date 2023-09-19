@@ -1,7 +1,0 @@
-nameReference:
-  - kind: Service
-    name: service-preview
-    fieldSpecs:
-      - kind: Ingress
-        name: ingress-preview
-        path: /spec/rules/http/paths/backend/service/name
