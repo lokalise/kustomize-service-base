@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.12.0](https://github.com/lokalise/kustomize-service-base/compare/rollout-v1.11.0...rollout-v1.12.0) (2023-10-31)
+
+
+### Features
+
+* Use port names in network policies ([d223729](https://github.com/lokalise/kustomize-service-base/commit/d223729b9b3e8204074a0db8a5c4078c38b2d830))
+
 ## [1.11.0](https://github.com/lokalise/kustomize-service-base/compare/rollout-v1.10.1...rollout-v1.11.0) (2023-08-21)
 
 
