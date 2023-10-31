@@ -6,7 +6,7 @@ patchesJson6902:
     group: networking.k8s.io
     version: v1
     kind: Ingress
-    name: ingress-internal
+    name: ingress-internal.*
   patch: |-
     - op: replace
       path: /spec/ingressClassName
