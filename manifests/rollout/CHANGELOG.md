@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.12.1](https://github.com/lokalise/kustomize-service-base/compare/rollout-v1.12.0...rollout-v1.12.1) (2023-11-09)
+
+
+### Bug Fixes
+
+* Correctly reference rollout referece in ScaledObjects ([68e902f](https://github.com/lokalise/kustomize-service-base/commit/68e902f82faacc9dd255243ccb37b1aed9740c11))
+
 ## [1.12.0](https://github.com/lokalise/kustomize-service-base/compare/rollout-v1.11.0...rollout-v1.12.0) (2023-10-31)
 
 
