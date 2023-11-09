@@ -172,6 +172,10 @@ nameReference:
   fieldSpecs:
   - path: spec/scaleTargetRef/name
     kind: HorizontalPodAutoscaler
+- kind: Rollout
+  fieldSpecs:
+  - path: spec/scaleTargetRef/name
+    kind: ScaledObject
 - kind: Deployment
   version: v1
   group: apps
