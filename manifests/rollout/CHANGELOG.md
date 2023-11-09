@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.13.0](https://github.com/lokalise/kustomize-service-base/compare/rollout-v1.12.1...rollout-v1.13.0) (2023-11-09)
+
+
+### Features
+
+* Reduce ScaledObject replicas ([e841743](https://github.com/lokalise/kustomize-service-base/commit/e841743f82dca771b3297468924ab39fac34f0c1))
+
 ## [1.12.1](https://github.com/lokalise/kustomize-service-base/compare/rollout-v1.12.0...rollout-v1.12.1) (2023-11-09)
 
 
