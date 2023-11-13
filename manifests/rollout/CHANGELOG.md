@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.14.0](https://github.com/lokalise/kustomize-service-base/compare/rollout-v1.13.0...rollout-v1.14.0) (2023-11-13)
+
+
+### Features
+
+* Use HTTP for health and readiness checks ([02f761e](https://github.com/lokalise/kustomize-service-base/commit/02f761eb3206c1cdc950ce92faf281b883f518d5))
+
 ## [1.13.0](https://github.com/lokalise/kustomize-service-base/compare/rollout-v1.12.1...rollout-v1.13.0) (2023-11-09)
 
 
