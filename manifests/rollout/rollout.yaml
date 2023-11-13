@@ -64,16 +64,18 @@ spec:
             periodSeconds: 10
             successThreshold: 1
             failureThreshold: 3
-            tcpSocket:
+            httpGet:
               port: app
+              path: /health
           # Readiness probes, which dictate if a pod is ready to receive traffic
           readinessProbe:
             initialDelaySeconds: 5
             periodSeconds: 10
             successThreshold: 1
             failureThreshold: 3
-            tcpSocket:
+            httpGet:
               port: app
+              path: /health
           # This defines our resource limits
           resources:
             requests:
