@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.13.0](https://github.com/lokalise/kustomize-service-base/compare/rollout-v1.14.0...rollout-v1.13.0) (2023-12-27)
+
+
+### Miscellaneous Chores
+
+* release 1.12.0 ([7258eee](https://github.com/lokalise/kustomize-service-base/commit/7258eeef51394a2246872b5a8eec9440cc1d424c))
+* release 1.13.0 ([e7f3643](https://github.com/lokalise/kustomize-service-base/commit/e7f3643d1d4a46880429154ce8597a2621f90363))
+
 ## [1.14.0](https://github.com/lokalise/kustomize-service-base/compare/rollout-v1.13.0...rollout-v1.14.0) (2023-11-13)
 
 
