@@ -7,7 +7,6 @@ resources:
   - servicePreview.yaml
   - serviceMonitor.yaml
   - serviceAccount.yaml
-  - scaledobject.yaml
   - pdb.yaml
   - networkpolicy.yaml
 
