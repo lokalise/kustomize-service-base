@@ -81,6 +81,7 @@ Component | Applies to Group(s) | Description
 --- | --- | ---
 no-tls | ingress-internal | Updates the `ingressClassName` to `nginx-internal-http`, which is a TLS-disabled, internal ingress controller.
 http | slo | Updates the `slo[0, 1].sli.plugin` to `lokalise/http/availability`, which [supports](https://github.com/lokalise/common-sloth-sli-plugins/tree/main/plugins/http) setting a route regex for the SLO.
+autoscaling | rollout | Includes a `ScaledObject` (Keda), which creates an `HPA` in the backgroun used for automatic scaling of Pods.
 
 Usage:
 
