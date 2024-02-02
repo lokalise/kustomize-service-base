@@ -1,5 +1,23 @@
 # Changelog
 
+## [1.13.0](https://github.com/lokalise/kustomize-service-base/compare/rollout-v1.13.0...rollout-v1.13.0) (2024-02-02)
+
+
+### ⚠ BREAKING CHANGES
+
+* **PLAT-2734:** Remove the previous `autoscaling` group from the base.
+
+### Features
+
+* **PLAT-2734:** Make Pod autoscaling optional (and disabled) by default ([7f8563b](https://github.com/lokalise/kustomize-service-base/commit/7f8563b7c5012db590c596efa0c1fd1b710df248))
+* Use HTTP for health and readiness checks ([02f761e](https://github.com/lokalise/kustomize-service-base/commit/02f761eb3206c1cdc950ce92faf281b883f518d5))
+
+
+### Miscellaneous Chores
+
+* release 1.12.0 ([7258eee](https://github.com/lokalise/kustomize-service-base/commit/7258eeef51394a2246872b5a8eec9440cc1d424c))
+* release 1.13.0 ([e7f3643](https://github.com/lokalise/kustomize-service-base/commit/e7f3643d1d4a46880429154ce8597a2621f90363))
+
 ## [1.13.0](https://github.com/lokalise/kustomize-service-base/compare/rollout-v1.14.0...rollout-v1.13.0) (2023-12-27)
 
 
