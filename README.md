@@ -1,5 +1,15 @@
 # Kustomize Service Base
 
+<!-- vim-markdown-toc GFM -->
+
+* [Contributing](#contributing)
+* [Usage](#usage)
+* [Organization](#organization)
+    * [Components](#components)
+    * [Versioning](#versioning)
+
+<!-- vim-markdown-toc -->
+
 ## Contributing
 
 Use conventional commits, when making changes to assure a good changelog and
