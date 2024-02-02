@@ -1,4 +1,4 @@
-# PUBLIC kustomize manifests
+# Kustomize Service Base
 
 ## Contributing
 
