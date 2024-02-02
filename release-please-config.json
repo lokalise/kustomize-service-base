@@ -24,9 +24,6 @@
     },
     "manifests/slo": {
       "package-name": "slo"
-    },
-    "manifests/autoscaling": {
-      "package-name": "autoscaling"
     }
   }
 }

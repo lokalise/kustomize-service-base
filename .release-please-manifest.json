@@ -6,5 +6,4 @@
   "manifests/cronjob": "1.10.1",
   "manifests/job": "1.10.1",
   "manifests/slo": "1.10.1",
-  "manifests/autoscaling": "1.10.1"
 }
