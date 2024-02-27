@@ -19,3 +19,7 @@ configurations:
 
 openapi:
   path: argo_all_k8s_kustomize_schema.json
+
+secretGenerator:
+- name: rollout-env
+  behavior: create
