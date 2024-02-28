@@ -14,7 +14,8 @@
       "package-name": "ingress"
     },
     "manifests/rollout": {
-      "package-name": "rollout"
+      "package-name": "rollout",
+      "release-as": "1.20.0"
     },
     "manifests/cronjob": {
       "package-name": "cronjob"
