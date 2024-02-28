@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.1](https://github.com/lokalise/kustomize-service-base/compare/rollout-v1.3.0...rollout-v1.3.1) (2024-02-28)
+
+
+### Bug Fixes
+
+* fixed metadata ([416db1f](https://github.com/lokalise/kustomize-service-base/commit/416db1fd94133b8d071a58b3ec1233dc3dba380f))
+
 ## [1.3.0](https://github.com/lokalise/kustomize-service-base/compare/rollout-v1.2.0...rollout-v1.3.0) (2024-02-28)
 
 
