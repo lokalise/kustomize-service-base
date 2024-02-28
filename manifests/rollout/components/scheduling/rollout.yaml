@@ -2,8 +2,6 @@ apiVersion: argoproj.io/v1alpha1
 kind: Rollout
 spec:
   template:
-    metadata:
-      labels: {}
     spec:
         # Avoid pods to be deployed to the same node or availability zone
         topologySpreadConstraints:
