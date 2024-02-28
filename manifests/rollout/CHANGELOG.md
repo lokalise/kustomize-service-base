@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.20.0](https://github.com/lokalise/kustomize-service-base/compare/rollout-v1.20.0...rollout-v1.20.0) (2024-02-28)
+
+
+### Features
+
+* Modify topology spread constraing transform ([a307ac8](https://github.com/lokalise/kustomize-service-base/commit/a307ac8c77de03c7879be16b9d623fb7b110bfd1))
+
 ## [1.20.0](https://github.com/lokalise/kustomize-service-base/compare/rollout-v1.3.1...rollout-v1.20.0) (2024-02-28)
 
 
