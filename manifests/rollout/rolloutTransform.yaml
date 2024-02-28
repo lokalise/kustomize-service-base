@@ -209,7 +209,7 @@ commonLabels:
   create: false
   kind: Rollout
 - path: spec/template/spec/topologySpreadConstraints/labelSelector/matchLabels
-  create: false
+  create: true
   kind: Rollout
 
 # https://github.com/kubernetes-sigs/kustomize/blob/master/api/konfig/builtinpluginconsts/commonannotations.go
