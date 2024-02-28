@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.3.0](https://github.com/lokalise/kustomize-service-base/compare/rollout-v1.2.0...rollout-v1.3.0) (2024-02-28)
+
+
+### Features
+
+* Add scheduling component ([2f09612](https://github.com/lokalise/kustomize-service-base/commit/2f09612a793e5ccdcb7285e4f8f0a6f224a1685e))
+* Added scheduling component to rollout ([c8b38ce](https://github.com/lokalise/kustomize-service-base/commit/c8b38ce5becbd02c06577c37e2a89933f232774a))
+
 ## [1.2.0](https://github.com/lokalise/kustomize-service-base/compare/rollout-v1.13.0...rollout-v1.2.0) (2024-02-02)
 
 
