@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.20.0](https://github.com/lokalise/kustomize-service-base/compare/rollout-v1.20.0...rollout-v1.20.0) (2024-02-29)
+
+
+### Features
+
+* Modify topology spread constraing transform ([a307ac8](https://github.com/lokalise/kustomize-service-base/commit/a307ac8c77de03c7879be16b9d623fb7b110bfd1))
+
+
+### Bug Fixes
+
+* Fixed wrong indentation ([b654286](https://github.com/lokalise/kustomize-service-base/commit/b6542860b1cd2daa563ffb795029195d3056f185))
+
 ## [1.20.0](https://github.com/lokalise/kustomize-service-base/compare/rollout-v1.20.0...rollout-v1.20.0) (2024-02-28)
 
 
