@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.21.0](https://github.com/lokalise/kustomize-service-base/compare/rollout-v1.20.2...rollout-v1.21.0) (2024-02-29)
+
+
+### Features
+
+* Modified podAntiaffinity to be required during scheduling ([916fa6c](https://github.com/lokalise/kustomize-service-base/commit/916fa6cd2483a998d211e8173c0a4b52f6236001))
+
 ## [1.20.0](https://github.com/lokalise/kustomize-service-base/compare/rollout-v1.20.0...rollout-v1.20.0) (2024-02-28)
 
 
