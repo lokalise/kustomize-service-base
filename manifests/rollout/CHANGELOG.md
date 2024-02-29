@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.22.0](https://github.com/lokalise/kustomize-service-base/compare/rollout-v1.21.0...rollout-v1.22.0) (2024-02-29)
+
+
+### Features
+
+* Modified podAntiaffinity transforms ([b8108da](https://github.com/lokalise/kustomize-service-base/commit/b8108dad9df3e980a08a1a9b95e33fd99f0844f5))
+
 ## [1.21.0](https://github.com/lokalise/kustomize-service-base/compare/rollout-v1.20.2...rollout-v1.21.0) (2024-02-29)
 
 
