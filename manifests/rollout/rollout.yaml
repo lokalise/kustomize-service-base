@@ -116,18 +116,18 @@ spec:
                 topologyKey: "failure-domain.beta.kubernetes.io/zone"
                 labelSelector:
                   matchLabels: {}
-        # Avoid pods to be deployed to the same node or availability zone
-        topologySpreadConstraints:
-          - labelSelector:
-              matchLabels: {}
-            maxSkew: 1
-            topologyKey: topology.kubernetes.io/zone
-            whenUnsatisfiable: DoNotSchedule
-          - labelSelector:
-              matchLabels: {}
-            maxSkew: 1
-            topologyKey: kubernetes.io/hostname
-            whenUnsatisfiable: DoNotSchedule
+      # Avoid pods to be deployed to the same node or availability zone
+      topologySpreadConstraints:
+        - labelSelector:
+            matchLabels: {}
+          maxSkew: 1
+          topologyKey: topology.kubernetes.io/zone
+          whenUnsatisfiable: DoNotSchedule
+        - labelSelector:
+            matchLabels: {}
+          maxSkew: 1
+          topologyKey: kubernetes.io/hostname
+          whenUnsatisfiable: DoNotSchedule
 
   strategy:
     blueGreen:
