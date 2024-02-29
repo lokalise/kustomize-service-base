@@ -101,7 +101,7 @@ spec:
                   values:
                     - application
         podAntiAffinity:
-          preferredDuringSchedulingIgnoredDuringExecution:
+          requiredDuringSchedulingIgnoredDuringExecution:
             # We want to prefer (but not require) that pods do not get
             # scheduled on the same node
             - weight: 100
