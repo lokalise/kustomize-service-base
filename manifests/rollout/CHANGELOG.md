@@ -1,5 +1,38 @@
 # Changelog
 
+## [1.20.0](https://github.com/lokalise/kustomize-service-base/compare/rollout-v1.20.2...rollout-v1.20.0) (2024-02-29)
+
+
+### ⚠ BREAKING CHANGES
+
+* **PLAT-2734:** Remove the previous `autoscaling` group from the base.
+
+### Features
+
+* Add scheduling component ([2f09612](https://github.com/lokalise/kustomize-service-base/commit/2f09612a793e5ccdcb7285e4f8f0a6f224a1685e))
+* Add topology spread constraint ([a921076](https://github.com/lokalise/kustomize-service-base/commit/a9210769d17d4cd4e334aca6eeec5ca4f00fea1c))
+* Added scheduling component to rollout ([c8b38ce](https://github.com/lokalise/kustomize-service-base/commit/c8b38ce5becbd02c06577c37e2a89933f232774a))
+* Modify topology spread constraing transform ([a307ac8](https://github.com/lokalise/kustomize-service-base/commit/a307ac8c77de03c7879be16b9d623fb7b110bfd1))
+* **PLAT-2339:** Limit deny scope to current rollout only ([8b14f87](https://github.com/lokalise/kustomize-service-base/commit/8b14f870c42d613d2b8faf1ed1d0c51285c789b2))
+* **PLAT-2734:** Make Pod autoscaling optional (and disabled) by default ([7f8563b](https://github.com/lokalise/kustomize-service-base/commit/7f8563b7c5012db590c596efa0c1fd1b710df248))
+* Reduce ScaledObject replicas ([e841743](https://github.com/lokalise/kustomize-service-base/commit/e841743f82dca771b3297468924ab39fac34f0c1))
+* Use HTTP for health and readiness checks ([02f761e](https://github.com/lokalise/kustomize-service-base/commit/02f761eb3206c1cdc950ce92faf281b883f518d5))
+* Use port names in network policies ([d223729](https://github.com/lokalise/kustomize-service-base/commit/d223729b9b3e8204074a0db8a5c4078c38b2d830))
+
+
+### Bug Fixes
+
+* Correctly reference rollout referece in ScaledObjects ([68e902f](https://github.com/lokalise/kustomize-service-base/commit/68e902f82faacc9dd255243ccb37b1aed9740c11))
+* fixed metadata ([416db1f](https://github.com/lokalise/kustomize-service-base/commit/416db1fd94133b8d071a58b3ec1233dc3dba380f))
+* Fixed wrong indentation ([b654286](https://github.com/lokalise/kustomize-service-base/commit/b6542860b1cd2daa563ffb795029195d3056f185))
+* Modify create transform property ([0256eec](https://github.com/lokalise/kustomize-service-base/commit/0256eec9c53b428e4089c560ee86ed90dfbb02c4))
+
+
+### Miscellaneous Chores
+
+* release 1.12.0 ([7258eee](https://github.com/lokalise/kustomize-service-base/commit/7258eeef51394a2246872b5a8eec9440cc1d424c))
+* release 1.13.0 ([e7f3643](https://github.com/lokalise/kustomize-service-base/commit/e7f3643d1d4a46880429154ce8597a2621f90363))
+
 ## [1.20.0](https://github.com/lokalise/kustomize-service-base/compare/rollout-v1.20.0...rollout-v1.20.0) (2024-02-28)
 
 
