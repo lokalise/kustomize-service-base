@@ -14,7 +14,7 @@
       "package-name": "ingress"
     },
     "manifests/rollout": {
-      "package-name": "rollout",
+      "package-name": "rollout"
     },
     "manifests/cronjob": {
       "package-name": "cronjob"
