@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.22.1](https://github.com/lokalise/kustomize-service-base/compare/rollout-v1.22.0...rollout-v1.22.1) (2024-03-01)
+
+
+### Bug Fixes
+
+* Fixed podAntiAffinity syntax ([9eb3dce](https://github.com/lokalise/kustomize-service-base/commit/9eb3dce6827b6164a9f56c2df482573fdac614da))
+
 ## [1.22.0](https://github.com/lokalise/kustomize-service-base/compare/rollout-v1.21.0...rollout-v1.22.0) (2024-02-29)
 
 
