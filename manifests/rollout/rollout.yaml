@@ -101,17 +101,28 @@ spec:
                   values:
                     - application
         podAntiAffinity:
-          requiredDuringSchedulingIgnoredDuringExecution:
+          #requiredDuringSchedulingIgnoredDuringExecution:
+          #  - topologyKey: "kubernetes.io/hostname"
+          #    labelSelector:
+          #      matchLabels: {}
+          #  - topologyKey: "failure-domain.beta.kubernetes.io/zone"
+          #    labelSelector:
+          #      matchLabels: {}
+          preferredDuringSchedulingIgnoredDuringExecution:
             # We want to prefer (but not require) that pods do not get
             # scheduled on the same node
-            - topologyKey: "kubernetes.io/hostname"
-              labelSelector:
-                matchLabels: {}
+            - weight: 100
+              podAffinityTerm:
+                topologyKey: "kubernetes.io/hostname"
+                labelSelector:
+                  matchLabels: {}
             # We want to prefer (but not require) that pods do not get
             # scheduled on the same availability zone, to get actual redundancy between zone failures
-            - topologyKey: "failure-domain.beta.kubernetes.io/zone"
-              labelSelector:
-                matchLabels: {}
+            - weight: 100
+              podAffinityTerm:
+                topologyKey: "failure-domain.beta.kubernetes.io/zone"
+                labelSelector:
+                  matchLabels: {}
       # Avoid pods to be deployed to the same node or availability zone
       topologySpreadConstraints:
         - labelSelector:
