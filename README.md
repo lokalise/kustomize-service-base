@@ -62,6 +62,17 @@ resources:
 - github.com/lokalise/kustomize-service-base/manifests/groups/job
 - github.com/lokalise/kustomize-service-base/manifests/groups/cronjob
 - github.com/lokalise/kustomize-service-base/manifests/groups/slo
+
+## Optional: REMOVE RESOURCES INCLUDED FROM THE BASE
+# patches:
+# - target:
+#    kind: Ingress
+#    group: networking.k8s.io
+#   patch: |-
+#     $patch: delete
+#     kind: Ingress
+#     metadata:
+#       name: all # this is just to satisfy the patch format; 'target' above defines which objects to patch
 ```
 
 #### Components
@@ -105,6 +116,17 @@ kind: Kustomization
 
 resources:
 - github.com/lokalise/kustomize-service-base/manifests/collections/node-service@v2.0.0
+
+## Optional: REMOVE RESOURCES INCLUDED FROM THE BASE
+# patches:
+# - target:
+#    kind: Ingress
+#    group: networking.k8s.io
+#   patch: |-
+#     $patch: delete
+#     kind: Ingress
+#     metadata:
+#       name: all # this is just to satisfy the patch format; 'target' above defines which objects to patch
 ```
 
 ### Versioning
