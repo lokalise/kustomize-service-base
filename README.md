@@ -92,13 +92,12 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
 resources:
-  - github.com/lokalise/kustomize-service-base/manifests/ingress-internal?ref=v1.7.2
+  - github.com/lokalise/kustomize-service-base/manifests/groups/ingress-internal?ref=v2.1.0
   ...
 
 components:
-  - github.com/lokalise/kustomize-service-base/manifests/ingress-internal/components/no-tls?ref=v1.7.2
+  - github.com/lokalise/kustomize-service-base/manifests/groups/ingress-internal/components/no-tls?ref=v2.1.0
 ```
-
 
 ### Collections
 
