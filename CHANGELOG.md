@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.0](https://github.com/lokalise/kustomize-service-base/compare/v2.0.0...v2.1.0) (2024-03-05)
+
+
+### Features
+
+* Remove slo group from collection ([205719d](https://github.com/lokalise/kustomize-service-base/commit/205719d461463e92f4413dcc19cb627c001f54f8))
+
 ## [2.0.0](https://github.com/lokalise/kustomize-service-base/compare/v2.0.0...v2.0.0) (2024-03-05)
 
 
