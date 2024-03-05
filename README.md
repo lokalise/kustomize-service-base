@@ -105,7 +105,7 @@ A set of groups, supporting a particular usage like services based on the Node s
 
 Collection | Groups included | Description
 --- | --- | ---
-node-service | `rollout`<br>`ingress-internal`<br>`job`<br>`slo` | Supporting a standard service based on the `node-service-template`
+node-service | `rollout`<br>`ingress-internal`<br>`job` | Supporting a standard service based on the `node-service-template`
 
 Usage:
 
