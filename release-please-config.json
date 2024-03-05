@@ -4,26 +4,8 @@
   "separate-pull-requests": true,
   "commit-search-depth": 100,
   "packages": {
-    "manifests/ingress-internal": {
-      "package-name": "ingress-internal"
-    },
-    "manifests/karpenter": {
-      "package-name": "karpenter"
-    },
-    "manifests/ingress": {
-      "package-name": "ingress"
-    },
-    "manifests/rollout": {
-      "package-name": "rollout"
-    },
-    "manifests/cronjob": {
-      "package-name": "cronjob"
-    },
-    "manifests/job": {
-      "package-name": "job"
-    },
-    "manifests/slo": {
-      "package-name": "slo"
+    ".": {
+      "release-as": "2.0.0"
     }
   }
 }
