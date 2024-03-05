@@ -51,18 +51,18 @@ karpenter | `Provisioner` | [Karpenter](https://karpenter.sh/) provisioner for a
 
 Usage:
 
-    ```yaml
-    apiVersion: kustomize.config.k8s.io/v1beta1
-    kind: Kustomization
+```yaml
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
 
-    resources:
-    - github.com/lokalise/kustomize-service-base/manifests/groups/rollout
-    - github.com/lokalise/kustomize-service-base/manifests/groups/ingress
-    - github.com/lokalise/kustomize-service-base/manifests/groups/ingress-internal
-    - github.com/lokalise/kustomize-service-base/manifests/groups/job
-    - github.com/lokalise/kustomize-service-base/manifests/groups/cronjob
-    - github.com/lokalise/kustomize-service-base/manifests/groups/slo
-    ```
+resources:
+- github.com/lokalise/kustomize-service-base/manifests/groups/rollout
+- github.com/lokalise/kustomize-service-base/manifests/groups/ingress
+- github.com/lokalise/kustomize-service-base/manifests/groups/ingress-internal
+- github.com/lokalise/kustomize-service-base/manifests/groups/job
+- github.com/lokalise/kustomize-service-base/manifests/groups/cronjob
+- github.com/lokalise/kustomize-service-base/manifests/groups/slo
+```
 
 #### Components
 
@@ -99,13 +99,13 @@ node-service | `rollout`<br>`ingress-internal`<br>`job`<br>`slo` | Supporting a 
 
 Usage:
 
-    ```yaml
-    apiVersion: kustomize.config.k8s.io/v1beta1
-    kind: Kustomization
+```yaml
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
 
-    resources:
-    - github.com/lokalise/kustomize-service-base/manifests/collections/node-service@v2.0.0
-    ```
+resources:
+- github.com/lokalise/kustomize-service-base/manifests/collections/node-service@v2.0.0
+```
 
 ### Versioning
 
