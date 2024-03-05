@@ -4,8 +4,6 @@
   "separate-pull-requests": true,
   "commit-search-depth": 100,
   "packages": {
-    ".": {
-      "release-as": "2.0.0"
-    }
+    ".": {}
   }
 }
