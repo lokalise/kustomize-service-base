@@ -114,7 +114,7 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
 resources:
-- github.com/lokalise/kustomize-service-base/manifests/collections/node-service@v2.0.0
+- github.com/lokalise/kustomize-service-base/manifests/collections/node-service@v2.1.0
 
 ## Optional: REMOVE RESOURCES INCLUDED FROM THE BASE
 # patches:
