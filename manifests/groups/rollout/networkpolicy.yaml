@@ -111,7 +111,7 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
-  name: networkpolicy-allow-coroot
+  name: networkpolicy-allow-monitoring
 spec:
   podSelector:
     matchLabels: {}
@@ -119,7 +119,8 @@ spec:
   - Ingress
   ingress:
   - from:
-      - podSelector:
-          matchLabels:
-            app.kubernetes.io/instance: coroot
-            app.kubernetes.io/name: node-agent
+      - namespaceSelector:
+          matchExpressions:
+          - key: kubernetes.io/metadata.name
+            operator: In
+            values: ["monitoring"]
