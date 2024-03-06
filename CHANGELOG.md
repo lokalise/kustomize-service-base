@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.3.0](https://github.com/lokalise/kustomize-service-base/compare/v2.2.0...v2.3.0) (2024-03-06)
+
+
+### Features
+
+* **PLAT-2789:** Update the coroot net policy to be wider: anything from the monitoring namespace is allowed ([2aafbdd](https://github.com/lokalise/kustomize-service-base/commit/2aafbddad1dd0b800c43758b8db2909f838d9349))
+
 ## [2.2.0](https://github.com/lokalise/kustomize-service-base/compare/v2.1.0...v2.2.0) (2024-03-06)
 
 
