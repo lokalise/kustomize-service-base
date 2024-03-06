@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.2.0](https://github.com/lokalise/kustomize-service-base/compare/v2.1.0...v2.2.0) (2024-03-06)
+
+
+### Features
+
+* **PLAT-2789:** Allow connections from coroot ([1c2ed26](https://github.com/lokalise/kustomize-service-base/commit/1c2ed26a7ee6ed5861d2d3e830a60df633f19e3d))
+
 ## [2.1.0](https://github.com/lokalise/kustomize-service-base/compare/v2.0.0...v2.1.0) (2024-03-05)
 
 
