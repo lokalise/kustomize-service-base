@@ -14,6 +14,10 @@ metadata:
 spec:
   # Controlled by HPA; do NOT set explicitly! (race condition with HPA)
   # replicas: 1
+  strategy:
+    canary:
+      maxSurge: 1
+      maxUnavailable: 1
   selector:
     matchLabels: {}
   template:
