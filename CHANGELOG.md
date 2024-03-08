@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.4.0](https://github.com/lokalise/kustomize-service-base/compare/v2.3.0...v2.4.0) (2024-03-08)
+
+
+### Features
+
+* added affinity architecture selector ([7d73b30](https://github.com/lokalise/kustomize-service-base/commit/7d73b3056ac122fc6b2677662933a5e3e784d894))
+
 ## [2.3.0](https://github.com/lokalise/kustomize-service-base/compare/v2.2.0...v2.3.0) (2024-03-06)
 
 
