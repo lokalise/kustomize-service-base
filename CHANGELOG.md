@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.5.0](https://github.com/lokalise/kustomize-service-base/compare/v2.4.0...v2.5.0) (2024-03-08)
+
+
+### Features
+
+* set rolling update strategy as default ([10a1b09](https://github.com/lokalise/kustomize-service-base/commit/10a1b0944ec77789ad1a627f838a3a19ecd7ecb7))
+
 ## [2.4.0](https://github.com/lokalise/kustomize-service-base/compare/v2.3.0...v2.4.0) (2024-03-08)
 
 
