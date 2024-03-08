@@ -143,13 +143,3 @@ spec:
           maxSkew: 1
           topologyKey: kubernetes.io/hostname
           whenUnsatisfiable: DoNotSchedule
-
-  strategy:
-    blueGreen:
-      # Blue
-      activeService: service
-      # Green
-      previewService: service-preview
-      # Set to 'false' to pause the rollout and have the
-      # ability to inspect Green with the new application version
-      autoPromotionEnabled: true
