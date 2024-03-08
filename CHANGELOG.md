@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.5.1](https://github.com/lokalise/kustomize-service-base/compare/v2.5.0...v2.5.1) (2024-03-08)
+
+
+### Bug Fixes
+
+* remove duplicated rollout strategy ([91ebd69](https://github.com/lokalise/kustomize-service-base/commit/91ebd69cc8432248cfc2271070c2535f68fa4055))
+
 ## [2.5.0](https://github.com/lokalise/kustomize-service-base/compare/v2.4.0...v2.5.0) (2024-03-08)
 
 
