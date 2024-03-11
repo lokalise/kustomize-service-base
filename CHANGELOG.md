@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.6.0](https://github.com/lokalise/kustomize-service-base/compare/v2.5.1...v2.6.0) (2024-03-11)
+
+
+### Features
+
+* modify rolling update to surge only ([9abb453](https://github.com/lokalise/kustomize-service-base/commit/9abb453e6819ff354b6d913c0bb183331c8c5c7d))
+
 ## [2.5.1](https://github.com/lokalise/kustomize-service-base/compare/v2.5.0...v2.5.1) (2024-03-08)
 
 
