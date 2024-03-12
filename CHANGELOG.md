@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.7.0](https://github.com/lokalise/kustomize-service-base/compare/v2.6.0...v2.7.0) (2024-03-12)
+
+
+### Features
+
+* added affinity to job ([22c7f25](https://github.com/lokalise/kustomize-service-base/commit/22c7f25d813f94504d1c183afb7965fece6598d2))
+
 ## [2.6.0](https://github.com/lokalise/kustomize-service-base/compare/v2.5.1...v2.6.0) (2024-03-11)
 
 
