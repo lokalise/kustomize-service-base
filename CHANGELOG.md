@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.8.0](https://github.com/lokalise/kustomize-service-base/compare/v2.7.0...v2.8.0) (2024-03-13)
+
+
+### Features
+
+* removed taint from Provisioner ([b0c6c4c](https://github.com/lokalise/kustomize-service-base/commit/b0c6c4c0c385793c5c2c2ce8d1d9c832ae433aa8))
+
 ## [2.7.0](https://github.com/lokalise/kustomize-service-base/compare/v2.6.0...v2.7.0) (2024-03-12)
 
 
