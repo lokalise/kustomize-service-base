@@ -4,10 +4,7 @@ metadata:
   name: provisioner
 spec:
   providerRef:
-    name: default
-  taints:
-    - key: platform/karpenter
-      effect: NoSchedule
+    name: al2-default
   requirements:
     - key: "karpenter.k8s.aws/instance-category"
       operator: In
